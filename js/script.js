@@ -76,7 +76,7 @@ if (! isTouchDevice) {
         });
 
         [].forEach.call(backgrounds, (background) => {
-            background.style.backgroundPosition = `${xValue * 0.45}px ${yValue * 0.45}px`;
+            background.style.backgroundPosition = `${xValue * 3.5}px ${yValue * 3.5}px`;
         });
         });
     },
@@ -103,7 +103,7 @@ if (! isTouchDevice) {
         });
 
         [].forEach.call(backgrounds, (background) => {
-            background.style.backgroundPosition = `${-xValue * 3}px ${-yValue * 3}px`;
+            background.style.backgroundPosition = `${xValue * 3}px ${yValue * 3}px`;
         });
         });
     },

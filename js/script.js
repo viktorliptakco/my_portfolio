@@ -99,11 +99,11 @@ if (! isTouchDevice) {
         //cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
 
         [].forEach.call(images, (image) => {
-            image.style.transform = `translateX(${-xValue * 5}px) translateY(${-yValue * 5}px)`;
+            image.style.transform = `translateX(${-xValue * 2.5}px) translateY(${-yValue * 2.5}px)`;
         });
 
         [].forEach.call(backgrounds, (background) => {
-            background.style.backgroundPosition = `${xValue * 3}px ${yValue * 3}px`;
+            background.style.backgroundPosition = `${xValue * 2}px ${yValue * 2}px`;
         });
         });
     },

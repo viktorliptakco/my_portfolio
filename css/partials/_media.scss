@@ -22,3 +22,13 @@
         padding: $navW + 2rem 2rem 2rem 2rem;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .card__one {
+        & .card__img {
+            top: -23px;
+            right: 129px;
+            height: 92%;
+        }
+    }
+}

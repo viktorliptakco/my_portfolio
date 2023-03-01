@@ -283,4 +283,11 @@ html, body {
   .desktop {
     padding: 5.5rem 2rem 2rem 2rem;
   }
+}
+@media screen and (max-width: 768px) {
+  .card__one .card__img {
+    top: -23px;
+    right: 129px;
+    height: 92%;
+  }
 }/*# sourceMappingURL=style.css.map */

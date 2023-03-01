@@ -41,10 +41,26 @@ const backgrounds = document.querySelectorAll('.card__bg');
 const range = 40;
 
 // const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
-const calcValue = (a, b) => ((a / b) * range - range / 2).toFixed(1); // thanks @alice-mx
+const calcValue = (a, b) => ((a / b) * range - range / 2).toFixed(1);
 
 let timeout;
-document.addEventListener('mousemove', ({ x, y }) => {
+
+// DIFRENCIES FOR MOBILE DEVICES AND TABLETS
+
+const container = document.querySelectorAll('.container')
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+if (! isTouchDevice) { 
+    //console.log('Zariadenie nemá dotykovú obrazovku');
+    
+    //ADD CLASS SCALER
+    container.forEach((element) => {
+        element.classList.add('scaler');
+    });
+    
+    //CARD EFFECT FOR LAPTOP/MAC/PC
+    document.addEventListener('mousemove', ({ x, y }) => {
         if (timeout) {
             window.cancelAnimationFrame(timeout);
         }
@@ -65,9 +81,12 @@ document.addEventListener('mousemove', ({ x, y }) => {
         });
     },
     false
-);
+    );
+} else {
+    //console.log('Zariadenie ma dotykovú obrazovku');
 
-window.addEventListener('deviceorientation',({ alpha, beta, gamma }) => {
+    //CARD EFFECT FOR ANDROID/ *ios*
+    window.addEventListener('deviceorientation',({ alpha, beta, gamma }) => {
         if (timeout) {
         window.cancelAnimationFrame(timeout);
         }
@@ -91,17 +110,5 @@ window.addEventListener('deviceorientation',({ alpha, beta, gamma }) => {
         });
     },
     false
-);
-
-const container = document.querySelectorAll('.container')
-
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-if (! isTouchDevice) { 
-    //console.log('Zariadenie nemá dotykovú obrazovku');
-    container.forEach((element) => {
-        element.classList.add('scaler');
-    });
-
-} else {
-    //console.log('Zariadenie ma dotykovú obrazovku');
+    );
 }

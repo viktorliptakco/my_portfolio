@@ -286,8 +286,8 @@ html, body {
 }
 @media screen and (max-width: 768px) {
   .card__one .card__img {
-    top: -23px;
-    right: 129px;
-    height: 92%;
+    top: 6px;
+    right: 81px;
+    height: 88%;
   }
 }/*# sourceMappingURL=style.css.map */

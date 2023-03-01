@@ -92,7 +92,7 @@ if (! isTouchDevice) {
         }
 
         timeout = window.requestAnimationFrame(() => {
-        const yValue = calcValue(beta, 180);
+        const yValue = calcValue(beta, 90);
         const xValue = calcValue(gamma, 180);
 
         cards.style.perspective = `${window.innerHeight * 2}px`;

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>project_me</title>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li id="link-one">
+                <div>1</div>
+                <div>One</div>
+            </li>
+            <li id="link-two">
+                <div>2</div>
+                <div>Two</div>
+            </li>
+            <li id="link-three">
+                <div>3</div>
+                <div>Three</div>
+            </li>
+            <li id="link-four">
+                <div>4</div>
+                <div>Four</div>
+            </li>
+            <li id="link-five">
+                <div>5</div>
+                <div>Five</div>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="desktop" id="one">
+        <h1>Desktop System with Sidebar</h1>
+        <p>This is the desktop 1</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum sem elit, vitae rutrum leo euismod vitae. Aliquam accumsan quam sit amet ultrices rhoncus. Proin diam diam, pellentesque et felis in, aliquam lacinia mauris. Sed euismod ipsum in feugiat sollicitudin. Praesent vel odio placerat, vehicula sapien eu, pellentesque dui. Praesent convallis augue non tristique lacinia. Quisque eu vulputate sem, vel commodo nisi. Nunc ullamcorper velit quis diam vulputate adipiscing. Mauris congue rhoncus fringilla. Phasellus porttitor purus neque, porttitor posuere nisl dictum eget. Duis pharetra augue leo, at sodales ipsum congue eu. Vestibulum eu justo erat. Nullam tempor varius mi, id placerat nisl pellentesque at. Quisque lacinia, nibh at viverra molestil.</p>
+    </section>
+    
+    <section class="desktop" id="two">      
+        <div class="cards">
+            <h3>GoT</h3>
+            <h1>Popular</h1> 
+            <div class="card card__one">
+                <div class="card__bg"></div>
+                <img class="card__img" src="viktorGOT.png" />
+                <div class="card__text">
+                <p class="card__title">Talbert Storm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="desktop" id="three">
+        <h1>Desktop Three</h1>
+        <p>This is the desktop 3</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum sem elit, vitae rutrum leo euismod vitae. Aliquam accumsan quam sit amet ultrices rhoncus. Proin diam diam, pellentesque et felis in, aliquam lacinia mauris. Sed euismod ipsum in feugiat sollicitudin. Praesent vel odio placerat, vehicula sapien eu, pellentesque dui. Praesent convallis augue non tristique lacinia. Quisque eu vulputate sem, vel commodo nisi. Nunc ullamcorper velit quis diam vulputate adipiscing. Mauris congue rhoncus fringilla. Phasellus porttitor purus neque, porttitor posuere nisl dictum eget. Duis pharetra augue leo, at sodales ipsum congue eu. Vestibulum eu justo erat. Nullam tempor varius mi, id placerat nisl pellentesque at. Quisque lacinia, nibh at viverra molestie, augue nunc commodo enim, euismod adipiscing eros mi nec nisl.</p>
+    </section>
+    
+    <section class="desktop" id="four">
+        <h1>Desktop Four</h1>
+        <p>This is the desktop 4</p>
+        <p>Sed egestas augue vitae enim elementum scelerisque. Morbi fermentum, ipsum sed vestibulum iaculis, diam tellus convallis nisi, in aliquam magna nisi quis felis. Quisque ac orci diam. Donec scelerisque lobortis scelerisque. Duis in tortor eget erat interdum mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse suscipit, libero placerat adipiscing molestie, neque velit fringilla mauris, vitae ultrices lectus est non magna. Integer ultrices erat id massa porta, quis sagittis elit ornare. Praesent mollis sit amet dolor ac dignissim. Sed sed adipiscing dolor. Curabitur lacus ipsum, lacinia eu orci vitae, lobortis eleifend lorem. Duis molestie neque in lacinia consequat. Suspendisse pretium malesuada odio, in euismod tortor convallis bibendum.</p>
+    </section>
+    
+    <section class="desktop" id="five">
+        <h1>Desktop Five</h1>
+        <p>This is the desktop 5</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum sem elit, vitae rutrum leo euismod vitae. Aliquam accumsan quam sit amet ultrices rhoncus. Proin diam diam, pellentesque et felis in, aliquam lacinia mauris. Sed euismod ipsum in feugiat sollicitudin. Praesent vel odio placerat, vehicula sapien eu, pellentesque dui. Praesent convallis augue non tristique lacinia. Quisque eu vulputate sem, vel commodo nisi. Nunc ullamcorper velit quis diam vulputate adipiscing. Mauris congue rhoncus fringilla. Phasellus porttitor purus neque, porttitor posuere nisl dictum eget. Duis pharetra augue leo, at sodales ipsum congue eu. Vestibulum eu justo erat. Nullam tempor varius mi, id placerat nisl pellentesque at. Quisque lacinia, nibh at viverra molestie, augue nunc commodo enim, euismod adipiscing eros mi nec nisl.</p>
+    </section>
+    
+    <script>
+
+        //SLIDER
+
+        if (window.matchMedia("(orientation: landscape)").matches) {
+            var desktops = document.querySelectorAll('.desktop');
+
+            function hide(element) {
+                element.style.setProperty('left', '-100%', element.style.getPropertyPriority('left'));
+            }
+
+            function hideAll() {
+                for (var i = 0; i < desktops.length; i++) {
+                    hide(desktops[i]);
+                }
+            }
+
+            function show(element) {
+                element.style.setProperty('left', '0', element.style.getPropertyPriority('left'));
+            }
+
+            function cardTogller (x, y) {
+                document.getElementById(x).addEventListener('click', function () {
+                    hideAll();
+                    show(document.getElementById(y));
+                }, false);
+            }
+
+            cardTogller ('link-one', 'one');
+            cardTogller ('link-two', 'two');
+            cardTogller ('link-three', 'three');
+            cardTogller ('link-four', 'four');
+            cardTogller ('link-five', 'five');
+
+            show(document.getElementById('one'));
+        }
+       
+        //CARD
+
+        const cards = document.querySelector(".cards");
+        const images = document.querySelectorAll(".card__img");
+        const backgrounds = document.querySelectorAll(".card__bg");
+        const range = 40;
+
+        // const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
+        const calcValue = (a, b) => ((a / b) * range - range / 2).toFixed(1); // thanks @alice-mx
+
+        let timeout;
+        document.addEventListener(
+        "mousemove",
+        ({ x, y }) => {
+            if (timeout) {
+            window.cancelAnimationFrame(timeout);
+            }
+
+            timeout = window.requestAnimationFrame(() => {
+            const yValue = calcValue(y, window.innerHeight);
+            const xValue = calcValue(x, window.innerWidth);
+
+            cards.style.transform = `rotateX(${-yValue}deg) rotateY(${xValue}deg)`;
+
+            [].forEach.call(images, (image) => {
+                image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+            });
+
+            [].forEach.call(backgrounds, (background) => {
+                background.style.backgroundPosition = `${xValue * 0.45}px ${
+                -yValue * 0.45
+                }px`;
+            });
+            });
+        },
+        false
+        );
+
+        window.addEventListener(
+        "deviceorientation",
+        ({ alpha, beta, gamma }) => {
+            if (timeout) {
+            window.cancelAnimationFrame(timeout);
+            }
+
+            timeout = window.requestAnimationFrame(() => {
+            const yValue = calcValue(beta, 180);
+            const xValue = calcValue(gamma, 180);
+
+            cards.style.perspective = `${window.innerHeight * 2}px`;
+            //cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+
+            [].forEach.call(images, (image) => {
+                image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+            });
+
+            [].forEach.call(backgrounds, (background) => {
+                background.style.backgroundPosition = `${xValue * 0.45}px ${
+                -yValue * 0.45
+                }px`;
+            });
+            });
+        },
+        false
+        );
+
+    </script>
+</body>
+</html>

@@ -35,16 +35,16 @@ show(document.getElementById('one'));
 
 //CARD
 
-const cards = document.querySelector(".cards");
-const images = document.querySelectorAll(".card__img");
-const backgrounds = document.querySelectorAll(".card__bg");
+const cards = document.querySelector('.cards');
+const images = document.querySelectorAll('.card__img');
+const backgrounds = document.querySelectorAll('.card__bg');
 const range = 40;
 
 // const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
 const calcValue = (a, b) => ((a / b) * range - range / 2).toFixed(1); // thanks @alice-mx
 
 let timeout;
-document.addEventListener("mousemove", ({ x, y }) => {
+document.addEventListener('mousemove', ({ x, y }) => {
         if (timeout) {
             window.cancelAnimationFrame(timeout);
         }
@@ -67,7 +67,7 @@ document.addEventListener("mousemove", ({ x, y }) => {
     false
 );
 
-window.addEventListener("deviceorientation",({ alpha, beta, gamma }) => {
+window.addEventListener('deviceorientation',({ alpha, beta, gamma }) => {
         if (timeout) {
         window.cancelAnimationFrame(timeout);
         }
@@ -92,3 +92,16 @@ window.addEventListener("deviceorientation",({ alpha, beta, gamma }) => {
     },
     false
 );
+
+const container = document.querySelectorAll('.container')
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+if (! isTouchDevice) { 
+    //console.log('Zariadenie nemá dotykovú obrazovku');
+    container.forEach((element) => {
+        element.classList.add('scaler');
+    });
+
+} else {
+    //console.log('Zariadenie ma dotykovú obrazovku');
+}

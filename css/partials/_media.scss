@@ -12,12 +12,9 @@
         }
         & ul {
             flex-direction: row;
+            justify-content: center;
             width: 100%;
-            & div {
-                &:nth-child(1) {
-                    display: none;
-                }
-            }
+            height: 3em;
         }
     }
 

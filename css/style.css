@@ -80,7 +80,7 @@ h3 {
   height: 92%;
 }
 .card__one .card__bg {
-  background: url(/../../img/winterfell.jpg) center/cover no-repeat;
+  background: url(../img/winterfell.jpg) center/cover no-repeat;
 }
 
 .card__text {

@@ -1,0 +1,22 @@
+@media screen and (orientation: portrait) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3.5em;
+        width: 100vw;
+        &:hover {
+            width: 100vw;
+        }
+        & ul {
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+
+    .desktop {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+}

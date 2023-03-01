@@ -30,7 +30,7 @@ h3 {
   color: #eb285d;
   font-size: 16px;
   margin-bottom: 6px;
-  transform: translateZ(25px);
+  transform: translateZ(40px);
 }
 
 .cards {
@@ -63,6 +63,7 @@ h3 {
   box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.5);
   transform: translatez(60px);
 }
+
 .card__img {
   position: relative;
   height: 100%;

@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
-@import '_card';
+@import 'partials/card';
+
 
 //MAIN
 
@@ -153,25 +154,4 @@ nav {
     background: linear-gradient(45deg, rgba(194, 233, 221, 0.5) 1%, rgba(104, 119, 132, 0.5) 100%), linear-gradient(-45deg, #494d71 0%, rgba(217, 230, 185, 0.5) 80%);
 }
 
-@media screen and (orientation: portrait) {
-    nav {
-        flex-direction: column;
-        justify-content: center;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3.5em;
-        width: 100vw;
-        &:hover {
-            width: 100vw;
-        }
-        & ul {
-            flex-direction: row;
-            width: 100%;
-        }
-    }
-
-    .desktop {
-        padding: 1rem 1rem 1rem 1rem;
-    }
-}
+@import 'partials/media';

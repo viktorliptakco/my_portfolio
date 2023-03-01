@@ -1,0 +1,55 @@
+$navW: 3.5rem;
+$navColor: #2680F3;
+
+nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: $navW;
+    height: 100%;
+    //background: $navColor;
+    transition: all 300ms ease;
+    overflow: hidden;
+    z-index: 1;
+    &:hover {
+        width: $navW * 3;
+    }
+    * {
+        user-select: none;
+    }
+    & ul {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1em;
+        width: $navW * 4;
+        //box-shadow: 0px 0px 10px #333;
+        & li {
+        display: table-row;
+        background: darken($navColor, 10%);
+        cursor: pointer;
+        &:hover {
+            background: lighten($navColor, 10%);
+        }
+        &:active {
+            background: lighten($navColor, 20%);
+        }
+        & div {
+            height: $navW;
+            line-height: $navW;
+            display: table-cell;
+            &:nth-child(1) {
+            width: $navW;
+            text-align: center;
+            }
+            &:nth-child(2) {
+            width: $navW * 3;
+            text-align: left;
+            padding-left: $navW / 5;
+            }
+        }
+        }
+    }
+}

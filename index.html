@@ -35,18 +35,17 @@
     </nav>
 
     <section class="desktop" id="one">
-        <h1>Desktop System with Sidebar</h1>
-        <p>This is the desktop 1</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum sem elit, vitae rutrum leo euismod vitae. Aliquam accumsan quam sit amet ultrices rhoncus. Proin diam diam, pellentesque et felis in, aliquam lacinia mauris. Sed euismod ipsum in feugiat sollicitudin. Praesent vel odio placerat, vehicula sapien eu, pellentesque dui. Praesent convallis augue non tristique lacinia. Quisque eu vulputate sem, vel commodo nisi. Nunc ullamcorper velit quis diam vulputate adipiscing. Mauris congue rhoncus fringilla. Phasellus porttitor purus neque, porttitor posuere nisl dictum eget. Duis pharetra augue leo, at sodales ipsum congue eu. Vestibulum eu justo erat. Nullam tempor varius mi, id placerat nisl pellentesque at. Quisque lacinia, nibh at viverra molestil.</p>
+        <div class="aboutme">
+
+        </div>
     </section>
     
     <section class="desktop" id="two">      
         <div class="cards">
             <h3>GoT</h3>
-            <h1>Popular</h1> 
             <div class="card card__one">
                 <div class="card__bg"></div>
-                <img class="card__img" src="viktorGOT.png" />
+                <img class="card__img" src="img/viktorGOT.png" />
                 <div class="card__text">
                 <p class="card__title">Talbert Storm</p>
                 </div>
@@ -124,23 +123,22 @@
         "mousemove",
         ({ x, y }) => {
             if (timeout) {
-            window.cancelAnimationFrame(timeout);
+                window.cancelAnimationFrame(timeout);
             }
 
             timeout = window.requestAnimationFrame(() => {
             const yValue = calcValue(y, window.innerHeight);
             const xValue = calcValue(x, window.innerWidth);
 
-            cards.style.transform = `rotateX(${-yValue}deg) rotateY(${xValue}deg)`;
+            cards.style.transform = `rotateX(${yValue}deg) rotateY(${-xValue}deg)`;
 
             [].forEach.call(images, (image) => {
-                image.style.transform = `translateX(${-xValue}px) translateY(${-yValue}px)`;
+                image.style.transform = `translateX(${xValue}px) translateY(${yValue}px)`;
             });
 
             [].forEach.call(backgrounds, (background) => {
-                background.style.backgroundPosition = `${xValue * 0.45}px ${
-                -yValue * 0.45
-                }px`;
+                background.style.backgroundPosition = `${xValue * 0.45}px ${yValue * 0.45}px`;
+                console.log(-xValue);
             });
             });
         },
@@ -162,11 +160,11 @@
             //cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
 
             [].forEach.call(images, (image) => {
-                image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+                image.style.transform = `translateX(${-xValue}px) translateY(${-yValue}px)`;
             });
 
             [].forEach.call(backgrounds, (background) => {
-                background.style.backgroundPosition = `${xValue * 0.45}px ${
+                background.style.backgroundPosition = `${-xValue * 0.45}px ${
                 -yValue * 0.45
                 }px`;
             });

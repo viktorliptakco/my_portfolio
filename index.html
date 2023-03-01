@@ -134,7 +134,7 @@
             cards.style.transform = `rotateX(${-yValue}deg) rotateY(${xValue}deg)`;
 
             [].forEach.call(images, (image) => {
-                image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+                image.style.transform = `translateX(${-xValue}px) translateY(${-yValue}px)`;
             });
 
             [].forEach.call(backgrounds, (background) => {

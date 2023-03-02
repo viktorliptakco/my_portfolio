@@ -49,7 +49,7 @@ button {
     position: relative;
     left: 30%;
     //transition: left 0.45s ease;
-    @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+    @include transition;
     display: inline-block;
     cursor: pointer;
     outline: none;
@@ -64,7 +64,7 @@ button {
         width: 9rem;
         height: auto;
         .circle {
-        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        @include transition;
         position: relative;
         display: block;
         margin: 0;
@@ -73,14 +73,14 @@ button {
         background: $black;
         border-radius: 1.625rem;
         .icon {
-            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            @include transition;
             position: absolute;
             top: 0;
             bottom: 0;
             margin: auto;
             background: $white;
             &.arrow {
-            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            @include transition;
             left: 0.625rem;
             width: 1.125rem;
             height: 0.125rem;
@@ -100,7 +100,7 @@ button {
         }
         }
         .button-text {
-        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        @include transition;
         position: absolute;
         top: 0;
         left: 0;

@@ -56,19 +56,19 @@ html, body {
     height: 100%;
     border-radius: 1em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(20px);
     padding: 2em;
 }
 
 .scaler {
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(6px);
     scale: (0.95);
     //margin: 2em;
-    transition: all 0.5s ease;
+    @include transition;
     &:hover {
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(20px);
         scale: (1);
-        transition: all 0.5s ease;
+        @include transition;
     }
 }
 

@@ -356,12 +356,12 @@ html, body {
     height: 92%;
   }
 }
-@media screen and (orientation: landscape) and (max-width: 769px) {
+@media screen and (orientation: landscape) and (max-width: 768px) {
   .desktop {
     padding: 1rem;
   }
 }
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 768px) {
   #one .container {
     flex-direction: column;
   }
@@ -371,6 +371,10 @@ html, body {
   }
   .desktop {
     padding: 2rem 1rem;
+    height: 115vh;
+  }
+  .desktop .container {
+    max-height: 85%;
   }
   nav {
     flex-direction: column;

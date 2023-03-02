@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
 html, body {
   height: 100%;
 }
@@ -75,11 +76,6 @@ h3 {
   z-index: 0;
 }
 
-.card__one .card__img {
-  top: 49px;
-  right: 37px;
-  height: 92%;
-}
 .card__one .card__bg {
   background: url(../img/winterfell.jpg) center/cover no-repeat;
 }
@@ -112,7 +108,7 @@ nav {
   justify-content: center;
   top: 0;
   left: 0;
-  width: 3.5rem;
+  width: 9rem;
   height: 100%;
   transition: all 300ms ease;
   overflow: hidden;
@@ -126,33 +122,99 @@ nav * {
 nav ul {
   display: flex;
   flex-direction: column;
-  border-radius: 1em;
   overflow: hidden;
 }
 nav ul li {
   display: table-row;
-  background: #0c66da;
   cursor: pointer;
-  /*&:hover {
-      background: lighten($navColor, 10%);
-  }
-  &:active {
-      background: lighten($navColor, 20%);
-  }*/
 }
-nav ul li div {
-  height: 3.5rem;
-  line-height: 3.5rem;
-  display: table-cell;
+
+.nav-button {
+  margin: 1em 0;
 }
-nav ul li div:nth-child(1) {
-  width: 3.5rem;
+
+button {
+  position: relative;
+  left: 30%;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  opacity: 0.4;
+}
+button.learn-more {
+  width: 9rem;
+  height: auto;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: transparent;
+  font-weight: 700;
+  line-height: 1.6;
   text-align: center;
 }
-nav ul li div:nth-child(2) {
-  width: 10.5rem;
-  text-align: left;
-  padding-left: 0.7rem;
+button:hover {
+  left: 0;
+  opacity: 0.7;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
 }
 
 *, *:before, *:after {
@@ -176,7 +238,7 @@ html, body {
   left: -100%;
   width: 100%;
   height: 100%;
-  padding: 2rem 2rem 2rem 5.5rem;
+  padding: 2rem 2rem 2rem 9rem;
   transition: all 350ms ease;
   overflow: auto;
 }
@@ -207,12 +269,12 @@ html, body {
 .scaler {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  scale: 0.9;
+  scale: 0.95;
   transition: all 0.5s ease;
 }
 .scaler:hover {
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   scale: 1;
   transition: all 0.5s ease;
 }
@@ -261,6 +323,13 @@ html, body {
   background: linear-gradient(135deg, #ff4b1f, #1fddff);
 }
 
+@media screen and (orientation: landscape) and (min-width: 769px) {
+  .card__one .card__img {
+    top: 49px;
+    right: 37px;
+    height: 92%;
+  }
+}
 @media screen and (orientation: portrait) {
   nav {
     flex-direction: column;
@@ -268,7 +337,7 @@ html, body {
     top: 0;
     left: 0;
     right: 0;
-    height: 3.5em;
+    height: 4.3em;
     width: 100vw;
   }
   nav:hover {
@@ -277,11 +346,9 @@ html, body {
   nav ul {
     flex-direction: row;
     justify-content: center;
-    width: 100%;
-    height: 3em;
   }
   .desktop {
-    padding: 5.5rem 2rem 2rem 2rem;
+    padding: 11rem 2rem 2rem 2rem;
   }
 }
 @media screen and (max-width: 768px) {

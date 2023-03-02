@@ -1,3 +1,15 @@
+//Queries for big screens
+@media screen and  (orientation: landscape) and (min-width:769px) {
+        .card__one {
+        .card__img {
+            top: 49px;
+            right: 37px;
+            height: 92%;
+        }
+    }
+}
+
+
 @media screen and (orientation: portrait) {
     nav {
         flex-direction: column;
@@ -5,7 +17,7 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 3.5em;
+        height: 4.3em;
         width: 100vw;
         &:hover {
             width: 100vw;
@@ -13,8 +25,8 @@
         & ul {
             flex-direction: row;
             justify-content: center;
-            width: 100%;
-            height: 3em;
+            //width: 100%;
+            //height: 3em;
         }
     }
 
@@ -32,3 +44,4 @@
         }
     }
 }
+

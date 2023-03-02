@@ -130,7 +130,7 @@ nav ul li {
 }
 
 .nav-button {
-  margin: 1em 0;
+  margin: 0.6em 0;
 }
 
 button {
@@ -204,7 +204,7 @@ button.learn-more .button-text {
 }
 button:hover {
   left: 0;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 button:hover .circle {
   width: 100%;
@@ -217,22 +217,67 @@ button:hover .button-text {
   color: #fff;
 }
 
+#one .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#one .container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+#one h2 {
+  font-size: 18px;
+}
+
+.photo {
+  max-width: 20em;
+  max-height: auto;
+}
+.photo img {
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 html, body {
   height: 100%;
   width: 100%;
   color: white;
+  text-align: center;
   font-size: 18px;
   font-weight: 400;
   font-family: "Quicksand", "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 .desktop {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   position: absolute;
   top: 0;
   left: -100%;
@@ -241,13 +286,6 @@ html, body {
   padding: 2rem 2rem 2rem 9rem;
   transition: all 350ms ease;
   overflow: auto;
-}
-.desktop h1 {
-  margin: 1rem 0;
-  font-weight: 300;
-}
-.desktop h1:nth-child(1) {
-  margin-top: 0;
 }
 .desktop p {
   font-weight: 300;
@@ -291,24 +329,8 @@ html, body {
   text-align: center;
 }
 
-/*#one {
-    //background: linear-gradient(340deg, #30e8bf, #ff8235);
-}*/
-#background-video {
-  width: 100vw;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
 #two {
-  background: linear-gradient(340deg, #30e8bf, #ff8235);
+  background: linear-gradient(135deg, #30e8bf, #ff8235);
 }
 
 #three {
@@ -320,7 +342,11 @@ html, body {
 }
 
 #five {
-  background: linear-gradient(135deg, #ff4b1f, #1fddff);
+  background: linear-gradient(135deg, #1fddff, #ff4b1f);
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (orientation: landscape) and (min-width: 769px) {
@@ -330,7 +356,22 @@ html, body {
     height: 92%;
   }
 }
+@media screen and (orientation: landscape) and (max-width: 769px) {
+  .desktop {
+    padding: 1rem;
+  }
+}
 @media screen and (orientation: portrait) {
+  #one .container {
+    flex-direction: column;
+  }
+  #one .container div {
+    height: 50%;
+    width: 100%;
+  }
+  .desktop {
+    padding: 2rem 1rem;
+  }
   nav {
     flex-direction: column;
     justify-content: center;
@@ -346,9 +387,6 @@ html, body {
   nav ul {
     flex-direction: row;
     justify-content: center;
-  }
-  .desktop {
-    padding: 11rem 2rem 2rem 2rem;
   }
 }
 @media screen and (max-width: 768px) {

@@ -1,0 +1,38 @@
+#one {
+    & .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+        }
+    }
+
+    & h2 {
+        font-size: 18px;
+    }
+}
+
+.photo {
+    max-width: 20em;
+    max-height: auto;
+    & img {
+        border-radius: 50%;
+        max-width: 100%;
+    }
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}

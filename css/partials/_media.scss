@@ -1,22 +1,27 @@
 //Queries for big screens
 @media screen and  (orientation: landscape) and (min-width:769px) {
-        .card__one {
+    
+    .card__one {
         .card__img {
             top: 49px;
             right: 37px;
             height: 92%;
         }
     }
+
 }
 
 //Queries for small screens
 @media screen and  (orientation: landscape) and (max-width:768px) {
+    
     .desktop {
         padding: 1rem;
     }
+
 }
 
 @media screen and (orientation: portrait) and (max-width:768px) {
+    
     #one {
         & .container {
             flex-direction: column;
@@ -48,9 +53,11 @@
             justify-content: center;
         }
     }
+
 }
 
 @media screen and (max-width: 768px) { 
+    
     .card__one {
         & .card__img {
             top: 25px;
@@ -58,5 +65,6 @@
             height: 88%;
         }
     }
+    
 }
 

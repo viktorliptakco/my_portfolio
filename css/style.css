@@ -277,8 +277,9 @@ html, body {
   width: 100%;
   height: 100%;
   padding: 2rem 2rem 2rem 9rem;
-  transition: all 350ms ease;
+  transition: all 300ms ease;
   overflow: auto;
+  color: white;
 }
 .desktop p {
   font-weight: 300;
@@ -310,18 +311,17 @@ html, body {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
-#five {
-  align-items: center;
-  background: #642B73;
-  background: linear-gradient(to bottom, #C6426E, #642B73);
-  display: flex;
-  font-family: "Open Sans", sans;
-  justify-content: center;
-  overflow: hidden;
-  perspective: 1800px;
-  text-align: center;
-}
-
+/*#five {
+    align-items: center;
+    background: #642B73;
+    background: linear-gradient(to bottom, #C6426E, #642B73);
+    display: flex;
+    font-family: 'Open Sans', sans;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1800px;
+    text-align: center;
+}*/
 #two {
   background: linear-gradient(135deg, #30e8bf, #ff8235);
 }

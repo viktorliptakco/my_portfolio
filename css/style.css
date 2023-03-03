@@ -227,6 +227,7 @@ button:hover .button-text {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgb(105, 105, 105);
 }
 #one .container div {
   display: flex;

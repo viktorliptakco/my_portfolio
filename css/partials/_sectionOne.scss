@@ -1,5 +1,8 @@
 #one {
-    background-image: url(../img/bg2.png);
+    //background-image: url(../img/bg2.png);
+
+    //background: linear-gradient(135deg, #29323c, #5f7083); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url(../img/nbg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -7,7 +10,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgb(105, 105, 105);
+        //color: rgb(105, 105, 105);
         & div {
             display: flex;
             flex-direction: column;
@@ -29,3 +32,15 @@
         max-width: 100%;
     }
 }
+
+/*#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}*/

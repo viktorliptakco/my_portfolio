@@ -6,10 +6,10 @@
     padding: 0;
 }
 
-html {
+/*html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-}
+}*/
 
 html, body {
     height: 100%;
@@ -23,17 +23,19 @@ html, body {
 }
 
 .desktop {
-    scroll-snap-align: start;
+    /*scroll-snap-align: start;
     scroll-snap-stop: always;
     position: absolute;
-    top: 0;
-    left: -100%;
+    top: 0;*/
+    display: none;
+    //left: -100%;
     width: 100%;
     height: 100%;
     padding: 2rem 2rem 2rem $navW;
     transition: all 300ms ease;
     overflow: auto;
     color: white;
+    //transition: display .8s ease;
     p {
         font-weight: 300;
         text-align: justify;
@@ -46,25 +48,44 @@ html, body {
     max-height: 100%;
     height: 100%;
     border-radius: 1em;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     backdrop-filter: blur(10px);
     padding: 2em;
 }
 
-.scaler {
+/*.scaler {
     backdrop-filter: blur(6px);
-    scale: (0.95);
+    scale: (0.97);
     //margin: 2em;
-    @include transition;
+    transition: all 0.5s ease;
     &:hover {
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(10px);
         scale: (1);
-        @include transition;
+        transition: all 0.5s ease;
+    }
+}*/
+
+.scaler {
+    animation-duration: .5s;
+    animation-name: slidein;
+}
+  
+@keyframes slidein {
+    from {
+        scale: (0.75);
+    }
+  
+    to {
+      scale: (1);
     }
 }
 
 #two {
     background: linear-gradient(135deg, #30e8bf, #ff8235);
+    .container {
+        background-color: linear-gradient(135deg,  #ff8235, #30e8bf);
+    }
 }
 
 #three {

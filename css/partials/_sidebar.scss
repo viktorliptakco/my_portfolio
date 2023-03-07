@@ -10,6 +10,9 @@ $navW: 9rem;
     transition: $property $duration $ease;
 }
 
+
+//NAVIGATION FOR MOUSE DEVICES
+
 .nav-computer {
     position: absolute;
     display: flex;
@@ -39,8 +42,6 @@ $navW: 9rem;
         }
     }
 }
-
-//NAVIGATION FOR MOUSE DEVICES
 
 .nav-button-computer {
     margin: 0.6em 0;
@@ -151,20 +152,25 @@ $navW: 9rem;
         height: 100%;
         & li {
             display: table-row;
-            background: transparent;
-            & button {
-                background: transparent;
-                border: none;
-                color: white;
-                & i {
-                    background-color: rgba(0, 0, 0, 0.5);
-                    border-radius: 50%;
-                    padding: 0.5em;
-                    color: white;
-                    font-size: 2em;
-                }
-            }
+            min-height: 100%;
+
            
+        }
+    }
+}
+
+.nav-button-touchscreen {  
+    & button {
+        background: transparent;
+        border: none;
+        color: white;
+        display: flex;
+        & i {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 0.5em;
+            color: white;
+            font-size: 2em;
         }
     }
 }

@@ -44,12 +44,6 @@ cardTogller ('link-five', 'five');
 
 show(document.getElementById('one'));
 
-//CHANGE ELEMENT SCALE
-
-container.forEach((element) => {
-    element.classList.add('scaler');
-});
-
 //find out if device has mouse or touchscreen
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
